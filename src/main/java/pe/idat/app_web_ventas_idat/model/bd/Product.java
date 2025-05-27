@@ -26,11 +26,9 @@ public class Product {
     private Integer reorderlevel;
     @Column(name = "discontinued")
     private Boolean discontinued;
-
     @ManyToOne
     @JoinColumn(name = "supplierid")
     private Supplier supplier;
-
     @ManyToOne
     @JoinColumn(name = "categoryid")
     private Category category;

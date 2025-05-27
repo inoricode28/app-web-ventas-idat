@@ -21,7 +21,7 @@ public class ProductController {
 
     @GetMapping("")
     public String frmManProduct(Model model){
-        model.addAttribute("listaproduct",
+        model.addAttribute("listaproductos",
                 productService.listarProductos());
         return "/backoffice/product/frmproduct";
     }

@@ -8,15 +8,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "supplier")
+@Table(name = "suppliers")
 public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer supplierid;
     @Column(name = "companyname")
     private String companyname;
-    @Column(name = "contacname")
-    private String contacname;
+    @Column(name = "contactname")
+    private String contactname;
     @Column(name = "contacttitle")
     private String contacttitle;
     @Column(name = "address")
@@ -27,8 +27,8 @@ public class Supplier {
     private String region;
     @Column(name = "postalcode")
     private String postalcode;
-    @Column(name = "contry")
-    private String contry;
+    @Column(name = "country")
+    private String country;
     @Column(name = "phone")
     private String phone;
     @Column(name = "fax")
