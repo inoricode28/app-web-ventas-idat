@@ -1,3 +1,4 @@
+
 $(document).on("click", "#btnagregar", function(){
     $("#txtnomproducto").val("");
     $("#txtpreciounit").val("");

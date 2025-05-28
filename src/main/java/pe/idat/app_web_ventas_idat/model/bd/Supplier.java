@@ -35,5 +35,4 @@ public class Supplier {
     private String fax;
     @Column(name = "homepage")
     private String homepage;
-
 }

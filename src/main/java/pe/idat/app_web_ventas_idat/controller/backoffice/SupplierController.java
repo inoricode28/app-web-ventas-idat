@@ -18,7 +18,7 @@ public class SupplierController {
 
     private SupplierService supplierService;
 
-    @GetMapping("/lista")
+    @GetMapping("/listar")
     @ResponseBody
     public List<Supplier> listarProveedores(){
         return supplierService.listarProveedores();
