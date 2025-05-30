@@ -1,6 +1,10 @@
 package pe.idat.app_web_ventas_idat.controller.frontoffice;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -34,6 +38,11 @@ public class LoginController {
     @GetMapping("/login-success")
     public String loginSuccess(){
         return "redirect:/auth/dashboard";
+    }
+
+    @GetMapping("/dashboard")
+    public String dashboard(HttpServletRequest request){
+        return "frontoffice/principal";
     }
 
 }
