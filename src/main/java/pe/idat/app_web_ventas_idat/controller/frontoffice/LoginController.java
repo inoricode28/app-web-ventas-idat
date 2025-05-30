@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pe.idat.app_web_ventas_idat.model.bd.Usuario;
+import pe.idat.app_web_ventas_idat.model.security.UsuarioSecurity;
 import pe.idat.app_web_ventas_idat.service.UsuarioService;
 
 @AllArgsConstructor
@@ -42,6 +43,11 @@ public class LoginController {
 
     @GetMapping("/dashboard")
     public String dashboard(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext()
+                .getAuthentication().getPrincipal();
+        UsuarioSecurity usuarioSecurity = (UsuarioSecurity) userDetails;
+        session.setAttribute("usuario", usuarioSecurity.getEmail());
         return "frontoffice/principal";
     }
 
