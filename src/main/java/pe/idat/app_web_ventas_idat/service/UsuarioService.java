@@ -22,6 +22,7 @@ public class UsuarioService {
             new BCryptPasswordEncoder();
 
     public Usuario buscarUsuarioPorEmail(String email){
+
         return usuarioRepository.findByEmail(email);
     }
 
